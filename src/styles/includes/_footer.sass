@@ -1,0 +1,87 @@
+footer
+	background: url(../img/ftbg.jpg) center center / cover no-repeat
+	.col-12
+		+media-breakpoint-down(lg)
+			margin-bottom: 30px
+
+	.footer-top
+		padding: 50px 0
+	.footer-title
+		+fs(18rem)
+		color: $white
+		font-family: 'cooper'
+		text-transform: uppercase
+		margin-bottom: 30px
+		+media-breakpoint-down(lg)
+			+fs(16rem)
+		&::after
+			content: ''
+			display: block
+			width: 120px
+			height: 1px
+			background: $white
+			margin-top: 10px
+	.contact-info
+		ul
+			li
+				+pos(rel,null)
+				font-weight: normal
+				line-height: 1.3
+				color: $white
+				padding-left: 45px
+				+flexbox
+				align-items: center
+				align-content: center
+				min-height: 50px
+				+media-breakpoint-down(lg)
+					+fs(13rem)
+				.icon
+					+pos(abs, 50% null null 0)
+					+transform(translateY(-50%))
+				a
+					color: $white
+					&:hover
+						color: $lblue
+	.footer-link
+		ul
+			li
+				padding-left: 20px
+				+pos(rel,null)
+				margin-bottom: 7px
+				+media-breakpoint-down(lg)
+					+fs(13rem)
+				&::before
+					content: ''
+					width: 8px
+					height: 8px
+					background: color-rgba($white,0.8)
+					+bor-rad(100px)
+					+pos(abs, 7px null null 0)
+					+media-breakpoint-down(lg)
+						width: 6px
+						height: 6px
+						top: 5px
+				a
+					color: $white
+					&:hover
+						color: $lblue
+	.social
+		+flexbox()
+		align-items: center
+		align-content: center
+		margin-bottom: 8px
+		a
+			+ a
+				margin-left: 10px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 30px
+			height: 30px
+			+bor-rad(100%)
+			background: $white
+			color: $blue
+			opacity: 0.8
+			&:hover
+				opacity: 1

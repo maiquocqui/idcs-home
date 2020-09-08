@@ -1,0 +1,39 @@
+.resource-page
+	padding: 50px 0
+	.text-24
+		+fs(24rem)
+		font-weight: 500
+	
+.vnl-slide
+	.slick-arrow
+		+pos(abs, -55px 0 null null)
+		+transform(translateY(-50%))
+		+fs(0)
+		&::before
+			content: ''
+			+fs(16rem)
+			width: 40px
+			height: 40px
+			+flexbox()
+			align-items: center
+			align-content: center
+			justify-content: center
+			color: $white
+			+bor-rad(5px)
+			background: $blue
+		&:hover
+			&::before
+				background: $lblue
+		&.slick-prev
+			right: 50px
+			&::before
+				content: '\f104'
+		&.slick-next
+			&::before
+				content: '\f105'
+	.logo
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		height: 130px
