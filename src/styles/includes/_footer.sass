@@ -8,63 +8,95 @@ footer
 		padding: 50px 0
 	.footer-title
 		+fs(18rem)
-		color: $white
-		font-family: 'cooper'
+		line-height: 1.3
+		+flexbox
+		height: 48px
+		align-items: flex-end
+		align-content: flex-end
+		color: $red
+		font-weight: 600
 		text-transform: uppercase
 		margin-bottom: 30px
+		+pos(rel,null)
 		+media-breakpoint-down(lg)
 			+fs(16rem)
+		&::before
+			content: ''
+			display: block
+			width: 30px
+			height: 1px
+			background: $red
+			+pos(abs, null null -10px 0)
+			z-index: 1
 		&::after
 			content: ''
 			display: block
 			width: 120px
 			height: 1px
-			background: $white
-			margin-top: 10px
+			background: #80949f
+			+pos(abs, null null -10px 0)
 	.contact-info
+		.company
+			+fs(16rem)
+			// text-transform: uppercase
+			font-weight: 600
+			color: $white
+			margin-bottom: 15px
 		ul
 			li
 				+pos(rel,null)
 				font-weight: normal
 				line-height: 1.3
-				color: $white
-				padding-left: 45px
+				color: #a0b2be
+				padding-left: 30px
 				+flexbox
 				align-items: center
 				align-content: center
-				min-height: 50px
+				margin-bottom: 15px
+				+fs(14rem)
 				+media-breakpoint-down(lg)
-					+fs(13rem)
-				.icon
-					+pos(abs, 50% null null 0)
-					+transform(translateY(-50%))
+				.fa
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					width: 24px
+					height: 24px
+					background: $red
+					color: $main
+					+bor-rad(100px)
+					+pos(abs, -3px null null 0)
 				a
-					color: $white
+					color: #a0b2be
 					&:hover
-						color: $lblue
+						color: $white
 	.footer-link
 		ul
 			li
-				padding-left: 20px
-				+pos(rel,null)
-				margin-bottom: 7px
-				+media-breakpoint-down(lg)
-					+fs(13rem)
-				&::before
-					content: ''
-					width: 8px
-					height: 8px
-					background: color-rgba($white,0.8)
-					+bor-rad(100px)
-					+pos(abs, 7px null null 0)
-					+media-breakpoint-down(lg)
-						width: 6px
-						height: 6px
-						top: 5px
-				a
+				+fs(14rem)
+				color: #a0b2be
+				margin-bottom: 15px
+				label
+					display: block
+					font-weight: 500
 					color: $white
-					&:hover
-						color: $lblue
+				select
+					+fs(16rem)
+					font-family: 'Baloo Paaji 2', cursive
+					line-height: 1.3
+					padding: 4px 15px
+					+bor-rad(5px)
+					background: #f2f3f5
+					border: none
+					width: 100%
+					color: $main
+					box-shadow: 0px 2px 0px color-rgba($black,0.3)
+					+transition(all,0.5s)
+					&::-webkit-input-placeholder
+						color: inherit
+						opacity: 0.5
+					&:active, &:focus
+						box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
 	.social
 		+flexbox()
 		align-items: center
@@ -85,3 +117,10 @@ footer
 			opacity: 0.8
 			&:hover
 				opacity: 1
+	.footer-bottom
+		border-top: 1px solid #1f3543
+		padding: 30px 0
+	.copyright
+		+fs(13rem)
+		text-align: center
+		color: #a0b1b9

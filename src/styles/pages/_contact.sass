@@ -15,11 +15,11 @@
 				background: color-rgba($black,0.5)
 		.block-text
 			.intro-text 
-				+fs(30rem)
+				+fs(22rem)
 				line-height: 1.3
 				color: $white
 				+pos(rel,null)
-				margin-bottom: 50px
+				margin-bottom: 40px
 				&::before
 					content: ''
 					display: inline-block
@@ -38,10 +38,10 @@
 			.email
 				display: inline-block
 				background: $blue
-				+fs(28rem)
-				line-height: 60px
-				padding-left: 80px
-				padding-right: 50px
+				+fs(20rem)
+				line-height: 40px
+				padding-left: 60px
+				padding-right: 20px
 				color: $white
 				+bor-rad(100px)
 				+pos(rel,null)
@@ -54,55 +54,50 @@
 					align-items: center
 					align-content: center
 					justify-content: center
-					width: 60px
-					height: 60px
+					width: 40px
+					height: 40px
 					+bor-rad(100px)
 					+pos(abs, 0 null null 0)
 			.phone
 				color: $white
 				line-height: 1.1
 				+pos(rel,null)
-				padding-left: 100px
+				padding-left: 70px
 				&:before
 					content: ''
 					display: block
-					width: 91px
-					height: 71px
+					width: 50px
+					height: 50px
 					background: url(../img/phone.png) center center no-repeat
-					+pos(abs, 8px null null 0)
+					background-size: 100% auto
+					+pos(abs, -2px null null 0)
 				span
-					+fs(36rem)
+					+fs(18rem)
 					display: block
 				a
-					+fs(48rem)
+					+fs(28rem)
 					display: block
 					font-weight: 700
 		.block-form
 			.contact-form
 				background: $white
-				+bor-rad(20px)
+				+bor-rad(5px)
 				overflow: hidden
 				.module-title
-					+fs(24rem)
+					+fs(18rem)
 					text-transform: uppercase
-					font-weight: 600
-					color: $white
+					font-weight: 700
+					color: $red
 					text-align: center
-					background: $blue
+					border-bottom: 1px solid $red
+					// background: $blue
 					padding: 10px
 				.form-wrap
 					padding: 30px
 
 	.contact-location
-		padding: 30px 0
-		margin-bottom: 50px
-		.location-list
-			.location
-				cursor: pointer
-		.location-map
-			border: 3px solid #e2e2e2
+		padding: 40px 0
+		.log-map
 			+bor-rad(5px)
-			.log-map
-				display: none
-				&.active
-					display: block
+			border: 1px solid darken($white, 10%)
+			overflow: hidden
